@@ -2,8 +2,8 @@ moontimedef
 ===========
 
 
-Design Goal
------------
+Design Goals
+------------
 
 Simple and Reusable
 
