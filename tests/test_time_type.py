@@ -21,7 +21,23 @@ def test_timetype_enum_value():
     assert TimeType.year.value == 80
 
 
-def test_timetype_lowercase_name():
+def test_timetype_name():
+    """
+    Test defined time_type lowercase name
+    """
+
+    assert TimeType.not_defined.name == 'not_defined'
+    assert TimeType.hour.name == 'hour'
+    assert TimeType.day.name == 'day'
+    assert TimeType.week.name == 'week'
+    assert TimeType.biweek.name == 'biweek'
+    assert TimeType.month.name == 'month'
+    assert TimeType.quarter.name == 'quarter'
+    assert TimeType.semiyear.name == 'semiyear'
+    assert TimeType.year.name == 'year'
+
+
+def test_timetype_uppercase_name():
     """
     Test defined time_type lowercase name
     """
@@ -35,3 +51,19 @@ def test_timetype_lowercase_name():
     assert TimeType.quarter.get_uppercase_name() == 'QUARTER'
     assert TimeType.semiyear.get_uppercase_name() == 'SEMIYEAR'
     assert TimeType.year.get_uppercase_name() == 'YEAR'
+
+
+def test_timetype_enum_by_value():
+    """
+    Test defined time_type enum value
+    """
+
+    assert TimeType(-1) == TimeType.not_defined
+    assert TimeType(10) == TimeType.hour
+    assert TimeType(20) == TimeType.day
+    assert TimeType(30) == TimeType.week
+    assert TimeType(40) == TimeType.biweek
+    assert TimeType(50) == TimeType.month
+    assert TimeType(60) == TimeType.quarter
+    assert TimeType(70) == TimeType.semiyear
+    assert TimeType(80) == TimeType.year
