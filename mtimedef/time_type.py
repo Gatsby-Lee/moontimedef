@@ -4,11 +4,12 @@
 """
 from enum import Enum, unique
 
+
 @unique
 class TimeType(Enum):
     not_defined = -1
     hour = 10
-    day  = 20
+    day = 20
     week = 30
     biweek = 40
     month = 50
@@ -22,16 +23,20 @@ class TimeType(Enum):
     def get_shortlower_name(self):
         return SHORT_NAME[self]
 
+    @staticmethod
+    def get_list():
+        return [c for c in TimeType]
+
 
 SHORT_NAME = {
-    TimeType.not_defined: 'na',
+    TimeType.not_defined: 'n/a',
     TimeType.hour: 'hh',
     TimeType.day: 'dd',
-    TimeType.week: 'ww',
-    TimeType.biweek: 'bw',
-    TimeType.month: 'mo',
+    TimeType.week: 'wk',
+    TimeType.biweek: 'biwk',
+    TimeType.month: 'mm',
     TimeType.quarter: 'qt',
-    TimeType.semiyear: 'sy',
+    TimeType.semiyear: 'semiyy',
     TimeType.year: 'yy',
 }
 

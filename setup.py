@@ -8,7 +8,7 @@ tests_require = [
 
 setup(
     name='moontimedef',
-    version='0.1',
+    version='0.2',
     description='Time Definition',
     long_description=open('README.rst').read(),
     classifiers=[

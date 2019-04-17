@@ -2,7 +2,7 @@
 :author: Gatsby Lee
 :since: 2019-04-10
 """
-from mtdef import TimeType
+from mtimedef import TimeType
 
 
 def test_timetype_enum_value():
@@ -67,3 +67,19 @@ def test_timetype_enum_by_value():
     assert TimeType(60) == TimeType.quarter
     assert TimeType(70) == TimeType.semiyear
     assert TimeType(80) == TimeType.year
+
+
+def test_get_shortlower_name():
+    """
+    Test shorten and lower cased name.
+    """
+
+    assert TimeType.not_defined.get_shortlower_name() == 'n/a'
+    assert TimeType.hour.get_shortlower_name() == 'hh'
+    assert TimeType.day .get_shortlower_name() == 'dd'
+    assert TimeType.week.get_shortlower_name() == 'wk'
+    assert TimeType.biweek.get_shortlower_name() == 'biwk'
+    assert TimeType.month.get_shortlower_name() == 'mm'
+    assert TimeType.quarter.get_shortlower_name() == 'qt'
+    assert TimeType.semiyear.get_shortlower_name() == 'semiyy'
+    assert TimeType.year.get_shortlower_name() == 'yy'
