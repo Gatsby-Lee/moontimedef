@@ -56,4 +56,4 @@ Simple and Reusable
 
 Simple: Keep cores only related to Time Definitions.
 
-Reusable: Keep low level so it can be used as libary.
+Reusable: Keep low level so it can be used as library.
