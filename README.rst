@@ -51,9 +51,6 @@ One of the common modules I've used is Time Definitions like Week, Month, Year, 
 Design Decisions
 ----------------
 
-Simple and Reusable
+**Simple:** Keep cores only related to Time Definitions.
 
-
-Simple: Keep cores only related to Time Definitions.
-
-Reusable: Keep low level so it can be used as library.
+**Reusable:** Keep low level so it can be used as library.
